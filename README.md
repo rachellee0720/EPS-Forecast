@@ -3,7 +3,7 @@
 ## :wave: Introduction
 1. Used&nbsp; ***historical accounting information of past three years***&nbsp; to &nbsp;***forecast earnings per share (EPS)***&nbsp; or &nbsp;***diluted EPS***&nbsp; for the &nbsp;***next year***&nbsp;.
 
-2. This study proposes three independent variable field combinations, two dependent variables and five data feature processing methods, adopts four kinds of models ( ***random forest regressor, eXtreme gradient boosting regressor, deep neural network, and long short-term memory*** ), and established a total of &nbsp;***144 machine learning models***&nbsp; and &nbsp;***12 deep learning models***&nbsp; in the end.
+2. This study proposes three independent variable field combinations, two dependent variables and five data feature processing methods, adopts four kinds of models (random forest regressor, eXtreme gradient boosting regressor, deep neural network, and long short-term memory), and established a total of &nbsp;***144 machine learning models***&nbsp; and &nbsp;***12 deep learning models***&nbsp; in the end.
 
 3. Obtained the result of mean absolute error = 1.391.
 
@@ -44,19 +44,19 @@
 
 ## :running_man: 流程
 1. **建立資料集**
-	1. 資料來源：&nbsp;&nbsp;西元2012 ~ 2017年在臺灣證券交易所上市或在證券櫃檯買賣中心上櫃且不屬於金融業或證券業的公司。
-	2. 應變數 (模型學習/預測目標) x 2：&nbsp;&nbsp;下一年的每股盈餘 或 下一年的稀釋每股盈餘。
-	3. 自變數欄位組合 (模型學習資料) x 3：&nbsp;&nbsp;使用前三年資產負債表、綜合損益表以及現金流量表中的會計資訊以組建資料集欄位。
+	1. ```資料來源：```西元2012 ~ 2017年在臺灣證券交易所上市或在證券櫃檯買賣中心上櫃且不屬於金融業或證券業的公司。
+	2. ```應變數 (模型學習/預測目標) x 2：```下一年的每股盈餘 或 下一年的稀釋每股盈餘。
+	3. ```自變數欄位組合 (模型學習資料) x 3：```使用前三年資產負債表、綜合損益表以及現金流量表中的會計資訊以組建資料集欄位。
 	
 2. **資料前處理**
-	1. 缺失值：&nbsp;&nbsp;補0 (假設公司未使用該會計科目)。
-	2. 資料特徵處理方法 x 5：&nbsp;&nbsp;將資料集欄位除以資產總額、營業收入淨額、公司市值或流通在外股數等會計資訊 或 透過標準化等方式，以消除不同公司之間的規模差距。
+	1. ```缺失值：```補0 (假設公司未使用該會計科目)。
+	2. ```資料特徵處理方法 x 5：```將資料集欄位除以資產總額、營業收入淨額、公司市值或流通在外股數等會計資訊 或 透過標準化等方式，以消除不同公司之間的規模差距。
 	
 3. **建構模型 ＆ 預測每股盈餘**
-	1. 建置模型 x 156：&nbsp;&nbsp;隨機森林迴歸器 x 72 + 極限梯度提升迴歸器 x 72 + 深度神經網路 x 6 + 長短期記憶模型 x 6。
-	2. 驗證過程 (調整超參數)：&nbsp;&nbsp;交叉驗證 ＆ 網格搜索。
-	3. 損失函數：&nbsp;&nbsp;平均絕對誤差 (mean absolute error, MAE)。
-	4. 基準預測值：&nbsp;&nbsp;以第三年每股盈餘或稀釋每股盈餘之數值直接作為對於下一年每股盈餘或稀釋每股盈餘的預測值。
+	1. ```建置模型 x 156：```隨機森林迴歸器 x 72 + 極限梯度提升迴歸器 x 72 + 深度神經網路 x 6 + 長短期記憶模型 x 6。
+	2. ```驗證過程 (調整超參數)：```交叉驗證 ＆ 網格搜索。
+	3. ```損失函數：```平均絕對誤差 (mean absolute error, MAE)。
+	4. ```基準預測值：```以第三年每股盈餘或稀釋每股盈餘之數值直接作為對於下一年每股盈餘或稀釋每股盈餘的預測值。
 
 ## :tada: 結果
 1. 與基準預測值比較後，可發現&nbsp;**機器學習**&nbsp;和&nbsp;**深度學習模型有能力預測**&nbsp;下一年的每股盈餘和稀釋每股盈餘。

@@ -1,4 +1,4 @@
-# Financial Report Analysis and Earnings Forecasting：Application of Machine Learning and Deep Learning Models
+# Financial Report Analysis and Earnings Forecast：Application of Machine Learning and Deep Learning Models
 
 ## :wave: Introduction
 1. Used&nbsp; ***historical accounting information of past three years***&nbsp; to &nbsp;***forecast earnings per share (EPS)***&nbsp; or &nbsp;***diluted EPS***&nbsp; for the &nbsp;***next year***&nbsp;.
